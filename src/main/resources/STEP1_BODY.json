@@ -1,0 +1,83 @@
+{
+  "NotifySMITZNOStatusRq": {
+    "ZNO": {
+      "Number": "aaaaaaaaaaaaaaa",
+      "SourceID": "aaaaaaaaaaaaaaa",
+      "Title": "aaaaaaaaaaaaaaa",
+      "Description": "aaaaaaaaaaaaaaa",
+      "TemplateID": "2147483647",
+      "Status": "aaaaaaaaaaaaaaa",
+      "AssigneeName": "aaaaaaaaaaaaaaa",
+      "AssignmentName": "aaaaaaaaaaaaaaa",
+      "NextBreach": "2018-06-10T15:07:18",
+      "ActualFinish": "2018-06-10T15:07:18",
+      "CloseTime": "2018-06-10T15:07:18",
+      "Resolution": "aaaaaaaaaaaaaaa",
+      "ResolutionCode": "aaaaaaaaaaaaaaa",
+      "AttachmentStatus": "true",
+      "PriorityCode": "aaaaaaaaaaaaaaa",
+      "ContactName": "aaaaaaaaaaaaaaa",
+      "CallbackContact": "aaaaaaaaaaaaaaa",
+      "Category": "aaaaaaaaaaaaaaa",
+      "SbK2": "true",
+      "SbAIB": "true",
+      "SbDRUGId": "aaaaaaaaaaaaaaa",
+      "SbMqrqid": "aaaaaaaaaaaaaaa",
+      "SbSourceName": "aaaaaaaaaaaaaaa",
+      "IncidentID": "aaaaaaaaaaaaaaa",
+      "SbForecastMoveCause": "aaaaaaaaaaaaaaa",
+      "SbLogin": "aaaaaaaaaaaaaaa",
+      "SbPassword": "aaaaaaaaaaaaaaa",
+      "AdditionalFields": {
+        "ClientFullName": "aaaaaaaaaaaaaaa",
+        "ClientINN": "aaaaaaaaaaaaaaa",
+        "ClientSegment": "aaaaaaaaaaaaaaa",
+        "ClientTB": "aaaaaaaaaaaaaaa",
+        "ClientVSP": "aaaaaaaaaaaaaaa",
+        "PSFNumber": "aaaaaaaaaaaaaaa",
+        "ManualRouting": "true",
+        "AnswerClient": "aaaaaaaaaaaaaaa",
+        "PSFRouter": "aaaaaaaaaaaaaaa"
+      },
+      "ECM": [
+        {
+          "ECMFolderId": "aaaaaaaaaaaaaaa",
+          "ECMFolderType": "aaaaaaaaaaaaaaa"
+        },
+        {
+          "ECMFolderId": "11",
+          "ECMFolderType": "11"
+        }
+      ],
+      "Channel": "aaaaaaaaaaaaaaa",
+      "DynamicFields": {
+        "DynamicField": [
+          {
+            "DFId": "aaaaaaaaaaaaaaa",
+            "DFName": "aaaaaaaaaaaaaaa",
+            "DFValue": "aaaaaaaaaaaaaaa"
+          },
+          {
+            "DFId": "qq",
+            "DFName": "qq",
+            "DFValue": "qq"
+          }
+        ]
+      },
+      "SbDynamicFields": {
+        "DynamicField": [
+          {
+            "SbDFId": "aaaaaaaaaaaaaaa",
+            "SbDFName": "aaaaaaaaaaaaaaa",
+            "SbDFValue": "aaaaaaaaaaaaaaa"
+          },
+          {
+            "SbDFId": "33",
+            "SbDFName": "33",
+            "SbDFValue": "33"
+          }
+        ]
+      }
+    }
+  }
+}
