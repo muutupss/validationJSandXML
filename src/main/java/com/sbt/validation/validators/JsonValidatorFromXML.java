@@ -6,6 +6,7 @@ import com.github.fge.jsonschema.exceptions.ProcessingException;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
 import com.github.fge.jsonschema.main.JsonValidator;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -22,13 +23,16 @@ public class JsonValidatorFromXML extends CustomValidator {
 
         final JsonSchemaFactory factory = JsonSchemaFactory.byDefault();
         JsonValidator v = factory.getValidator();
-
-        long startTime = System.currentTimeMillis();
         //ProcessingReport report = v.validate(s, d);
-        v.validate(s, d);
-        long endTime = System.currentTimeMillis();
 
-        System.out.println("Непосредственно Json валидация занимает " + (endTime - startTime) + " мс.");
+        FileWriter writer = new FileWriter("JSON.txt", false);
+        for (int i = 0; i < 5000; i++){
+            long startTime = System.currentTimeMillis();
+            v.validate(s, d);
+            long endTime = System.currentTimeMillis();
+            writer.write(String.valueOf(endTime - startTime));
+            writer.append(',');
+        }
         //System.out.println(report);
         return false;
     }
