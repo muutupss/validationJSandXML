@@ -1,0 +1,92 @@
+syntax="proto2";
+
+import "validation.proto";
+
+
+message NotifySMITZNOStatusRq {
+
+  message NOTIFYSMITZNOSTATUSRQ {
+
+    message ZNO {
+      required string Number = 32[(validation.regex) = ""];
+      required string SourceID = 1[(validation.regex) = ""];
+      required string Title = 2[(validation.regex) = ""];
+      required string Description = 3[(validation.regex) = ""];
+      required string TemplateID = 4[(validation.regex) = ""];
+      required string Status = 5[(validation.regex) = ""];
+      required string AssigneeName = 6[(validation.regex) = ""];
+      required string AssignmentName = 7[(validation.regex) = ""];
+      required string NextBreach = 8[(validation.regex) = ""];
+      required string ActualFinish = 9[(validation.regex) = ""];
+      required string CloseTime = 10[(validation.regex) = ""];
+      required string Resolution = 11[(validation.regex) = ""];
+      required string ResolutionCode = 12[(validation.regex) = ""];
+      required string AttachmentStatus = 13[(validation.regex) = ""];
+      required string PriorityCode = 14[(validation.regex) = ""];
+      required string ContactName = 15[(validation.regex) = ""];
+      required string CallbackContact = 16[(validation.regex) = ""];
+      required string Category = 17[(validation.regex) = ""];
+      required string SbK2 = 18[(validation.regex) = ""];
+      required string SbAIB = 19[(validation.regex) = ""];
+      required string SbDRUGId = 20[(validation.regex) = ""];
+      required string SbMqrqid = 21[(validation.regex) = ""];
+      required string SbSourceName = 22[(validation.regex) = ""];
+      required string IncidentID = 23[(validation.regex) = ""];
+      required string SbForecastMoveCause = 24[(validation.regex) = ""];
+      required string SbLogin = 25[(validation.regex) = ""];
+      required string SbPassword = 26[(validation.regex) = ""];
+
+      message ADDITIONALFIELDS {
+        required string ClientFullName = 33[(validation.regex) = ""];
+        required string ClientINN = 1[(validation.regex) = ""];
+        required string ClientSegment = 2[(validation.regex) = ""];
+        required string ClientTB = 3[(validation.regex) = ""];
+        required string ClientVSP = 4[(validation.regex) = ""];
+        required string PSFNumber = 5[(validation.regex) = ""];
+        required string ManualRouting = 6[(validation.regex) = ""];
+        required string AnswerClient = 7[(validation.regex) = ""];
+        required string PSFRouter = 8[(validation.regex) = ""];
+      }
+
+      required ADDITIONALFIELDS AdditionalFields = 27[(validation.regex) = ""];
+
+      message ECM {
+        required string ECMFolderId = 34[(validation.regex) = ""];
+        required string ECMFolderType = 1[(validation.regex) = ""];
+      }
+
+      repeated ECM Ecm = 28[(validation.required) = true];
+      required string Channel = 29[(validation.regex) = ""];
+
+      message DYNAMICFIELDS {
+
+        message DYNAMICFIELD {
+          required string DFId = 35[(validation.regex) = ""];
+          required string DFName = 1[(validation.regex) = ""];
+          required string DFValue = 2[(validation.regex) = ""];
+        }
+
+        repeated DYNAMICFIELD DynamicField = 36[(validation.repeatMax) = 5, (validation.repeatMin) = 0];
+      }
+
+      required DYNAMICFIELDS DynamicFields = 30[(validation.required) = true];
+
+      message SBDYNAMICFIELDS {
+
+        message DYNAMICFIELD {
+          required string SbDFId = 37[(validation.regex) = ""];
+          required string SbDFName = 1[(validation.regex) = ""];
+          required string SbDFValue = 2[(validation.regex) = ""];
+        }
+
+        repeated DYNAMICFIELD DynamicField = 38[(validation.repeatMax) = 5, (validation.repeatMin) = 0];
+      }
+
+      required SBDYNAMICFIELDS SbDynamicFields = 31[(validation.required) = true];
+    }
+
+    required ZNO Zno = 39[(validation.required) = true];
+  }
+
+  required NOTIFYSMITZNOSTATUSRQ NotifySMITZNOStatusRq = 40[(validation.required) = true];
+}

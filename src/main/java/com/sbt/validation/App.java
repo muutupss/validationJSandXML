@@ -4,6 +4,7 @@ import com.sbt.validation.util.Converter;
 import com.sbt.validation.util.PathConstants;
 import com.sbt.validation.validators.CustomValidator;
 import com.sbt.validation.validators.JsonValidatorFromXML;
+import com.sbt.validation.validators.ProtoValidator;
 import com.sbt.validation.validators.XMLValidator;
 import org.apache.commons.io.FileUtils;
 
@@ -23,13 +24,17 @@ public class App {
             System.err.println(ex.getMessage());
             return;
         }
-        analyzeValidator(new XMLValidator(xmlMessage, xsdSchema));
+        //analyzeValidator(new XMLValidator(xmlMessage, xsdSchema));
 
         String jsonMessage, jsonSchema;
         jsonMessage = Converter.xmlToJson(xmlMessage);
         jsonSchema = Converter.xsdToJsonSchema(xsdSchema);
 
-        analyzeValidator(new JsonValidatorFromXML(jsonMessage, jsonSchema));
+        System.out.println(jsonMessage);
+
+
+        analyzeValidator(new ProtoValidator(jsonMessage, jsonSchema));
+        //analyzeValidator(new JsonValidatorFromXML(jsonMessage, jsonSchema));
     }
 
     private static void analyzeValidator(CustomValidator customValidator){

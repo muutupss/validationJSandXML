@@ -1,0 +1,46 @@
+syntax="proto2";
+
+import "validation.proto";
+
+message NotifySMITZNOStatusRq {
+    required string Number1 = 1 [(validation.regex) = ""];
+    required string Number2 = 2 [(validation.regex) = ""];
+    required string Number3 = 3 [(validation.regex) = ""];
+    required string Number4 = 4 [(validation.regex) = ""];
+    required string Number5 = 5 [(validation.regex) = ""];
+    required string Number6 = 6 [(validation.regex) = ""];
+    required string Number7 = 7 [(validation.regex) = ""];
+    required string Number8 = 8 [(validation.regex) = ""];
+    required string Number9 = 9 [(validation.regex) = ""];
+    required string Number10 = 10 [(validation.regex) = ""];
+    required string Number11 = 11 [(validation.regex) = ""];
+    required string Number12 = 12 [(validation.regex) = ""];
+    required string Number13 = 13 [(validation.regex) = ""];
+    required string Number14 = 14 [(validation.regex) = ""];
+    required string Number15 = 15 [(validation.regex) = ""];
+    required string Number16 = 16 [(validation.regex) = ""];
+    required string Number17 = 17 [(validation.regex) = ""];
+    required string Number18 = 18 [(validation.regex) = ""];
+    required string Number19 = 19 [(validation.regex) = ""];
+    required string Number20 = 20 [(validation.regex) = ""];
+    required string Number21 = 21 [(validation.regex) = ""];
+    required string Number22 = 22 [(validation.regex) = ""];
+    required string Number23 = 23 [(validation.regex) = ""];
+    required string Number24 = 24 [(validation.regex) = ""];
+    required string Number25 = 25 [(validation.regex) = ""];
+    required string Number26 = 26 [(validation.regex) = ""];
+    required string Number27 = 27 [(validation.regex) = ""];
+    required string Number28 = 28 [(validation.regex) = ""];
+    required string Number29 = 29 [(validation.regex) = ""];
+    required string Number30 = 30 [(validation.regex) = ""];
+    required string Number31 = 31 [(validation.regex) = ""];
+    required string Number32 = 32 [(validation.regex) = ""];
+    required string Number33 = 33 [(validation.regex) = ""];
+    required string Number34 = 34 [(validation.regex) = ""];
+    required string Number35 = 35 [(validation.regex) = ""];
+    required string Number36 = 36 [(validation.regex) = ""];
+    required string Number37 = 37 [(validation.regex) = ""];
+    required string Number38 = 38 [(validation.regex) = ""];
+    required string Number39 = 39 [(validation.regex) = ""];
+    required string Number40 = 40 [(validation.regex) = ""];
+}

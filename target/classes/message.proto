@@ -1,0 +1,89 @@
+syntax="proto2";
+
+message NotifySMITZNOStatusRq {
+
+  message NOTIFYSMITZNOSTATUSRQ {
+
+    message ZNO {
+      required string Number = 32;
+      required string SourceID = 1;
+      required string Title = 2;
+      required string Description = 3;
+      required string TemplateID = 4;
+      required string Status = 5;
+      required string AssigneeName = 6;
+      required string AssignmentName = 7;
+      required string NextBreach = 8;
+      required string ActualFinish = 9;
+      required string CloseTime = 10;
+      required string Resolution = 11;
+      required string ResolutionCode = 12;
+      required string AttachmentStatus = 13;
+      required string PriorityCode = 14;
+      required string ContactName = 15;
+      required string CallbackContact = 16;
+      required string Category = 17;
+      required string SbK2 = 18;
+      required string SbAIB = 19;
+      required string SbDRUGId = 20;
+      required string SbMqrqid = 21;
+      required string SbSourceName = 22;
+      required string IncidentID = 23;
+      required string SbForecastMoveCause = 24;
+      required string SbLogin = 25;
+      required string SbPassword = 26;
+
+      message ADDITIONALFIELDS {
+        required string ClientFullName = 33;
+        required string ClientINN = 1;
+        required string ClientSegment = 2;
+        required string ClientTB = 3;
+        required string ClientVSP = 4;
+        required string PSFNumber = 5;
+        required string ManualRouting = 6;
+        required string AnswerClient = 7;
+        required string PSFRouter = 8;
+      }
+
+      required ADDITIONALFIELDS AdditionalFields = 27;
+
+      message ECM {
+        required string ECMFolderId = 34;
+        required string ECMFolderType = 1;
+      }
+
+      repeated ECM Ems = 28;
+      required string Channel = 29;
+
+      message DYNAMICFIELDS {
+
+        message DYNAMICFIELD {
+          required string DFId = 35;
+          required string DFName = 1;
+          required string DFValue = 2;
+        }
+
+        repeated DYNAMICFIELD DynamicField = 36;
+      }
+
+      required DYNAMICFIELDS DynamicFields = 30;
+
+      message SBDYNAMICFIELDS {
+
+        message DYNAMICFIELD {
+          required string SbDFId = 37;
+          required string SbDFName = 1;
+          required string SbDFValue = 2;
+        }
+
+        repeated DYNAMICFIELD DynamicField = 38;
+      }
+
+      required SBDYNAMICFIELDS SbDynamicFields = 31;
+    }
+
+    required ZNO Zno = 39;
+  }
+
+  required NOTIFYSMITZNOSTATUSRQ NotifySMITZNOStatusRq = 40;
+  }
